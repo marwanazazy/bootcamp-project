@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fit Fusion</title>
+    <style>
+        .body { 
+            background-color: rgb(248, 247, 247);
+        }
+        .h {
+            color: rgb(54, 7, 184);
+        }    
+        .text {
+            text-align: left;
+            color: rgb(54, 7, 184);
+            font-family: A2 beckett typeface;
+            font-size: 150%;
+        }   
+        form {
+            background-color: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0px 0px 10px rgba(0,0,0,0.1);
+            max-width: 400px;
+            margin: 0 auto;
+        }
+        label {
+            display: block;
+            margin: 10px 0 5px;
+        }
+        input[type="text"], input[type="password"] {
+            width: 100%;
+            padding: 10px;
+            margin: 5px 0 20px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+        }
+        input[type="submit"] {
+            background-color: rgb(54, 7, 184);
+            color: white;
+            border: none;
+            padding: 15px 20px;
+            font-size: 16px;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        input[type="submit"]:hover {
+            background-color: rgb(30, 0, 123);
+        }
+    </style>
+</head>
+<body class="body">
+    <h1 style="font-family: A2 beckett typeface; color: lightgrey; text-align: center; font-size:400%;">Fit Fusion</h1>
+    <br><br>
+    <p class="text">
+        Welcome to FitFusion, your ultimate destination for achieving fitness goals and embracing a healthier lifestyle! Our innovative app combines cutting-edge workout routines, personalized nutrition plans, and a vibrant community of fitness enthusiasts to help you stay motivated and on track. Whether you’re just starting your fitness journey or looking to elevate your training, FitFusion offers a comprehensive suite of features designed to cater to all fitness levels. With expert guidance, real-time progress tracking, and engaging challenges, we’re here to support and inspire you every step of the way. Join us at FitFusion and experience a fusion of fitness and fun that will transform your health and wellness journey!
+    </p>
+    <h3><center>Register</center></h3>
+    <form action="http://localhost:3000/register" method="POST">
+        <label for="username">Username:</label>
+        <input type="text" id="username" name="username" required>
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" required>
+        <input type="submit" value="Register">
+    </form>
+    <h3><center>login</center></h3>
+    <form action="http://localhost:3000/register" method="POST">
+        <label for="username">Username:</label>
+        <input type="text" id="username" name="username" required>
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" required>
+        <input type="submit" value="Log-In">
+    </form>
+</body>
+</html>
