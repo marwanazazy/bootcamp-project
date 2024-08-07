@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fit Fusion</title>
+    <style>
+        body { 
+            background-color: rgb(248, 247, 247);
+            font-family: 'Arial', sans-serif;
+        }
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0px 0px 10px rgba(0,0,0,0.1);
+        }
+        h1 {
+            color: rgb(54, 7, 184);
+            text-align: center;
+        }
+        .text {
+            text-align: left;
+            color: rgb(54, 7, 184);
+            font-size: 1.1em;
+        }
+        form {
+            margin-top: 20px;
+        }
+        label {
+            display: block;
+            margin: 10px 0 5px;
+            font-weight: bold;
+        }
+        input[type="number"], input[type="text"], select {
+            width: 100%;
+            padding: 10px;
+            margin: 5px 0 20px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+        }
+        input[type="submit"] {
+            background-color: rgb(54, 7, 184);
+            color: white;
+            border: none;
+            padding: 15px 20px;
+            font-size: 16px;
+            border-radius: 4px;
+            cursor: pointer;
+            width: 100%;
+        }
+        input[type="submit"]:hover {
+            background-color: rgb(30, 0, 123);
+        }
+        .result {
+            margin-top: 20px;
+        }
+    </style>
+    <script defer src="code.js"></script>
+</head>
+<body>
+    <div class="container">
+        <h1>Fit Fusion</h1>
+        <p class="text">
+            Welcome to FitFusion, your ultimate destination for achieving fitness goals and embracing a healthier lifestyle! Our innovative app combines cutting-edge workout routines, personalized nutrition plans, and a vibrant community of fitness enthusiasts to help you stay motivated and on track. Whether you’re just starting your fitness journey or looking to elevate your training, FitFusion offers a comprehensive suite of features designed to cater to all fitness levels. With expert guidance, real-time progress tracking, and engaging challenges, we’re here to support and inspire you every step of the way. Join us at FitFusion and experience a fusion of fitness and fun that will transform your health and wellness journey!
+        </p>
+        
+        <form id="fitFusionForm">
+            <label for="age">Please enter your age:</label>
+            <input type="number" id="age" name="age" required>
+
+            <label for="height">Please enter your height (cm):</label>
+            <input type="number" id="height" name="height" required>
+
+            <label for="weight">Please enter your weight (kg):</label>
+            <input type="number" id="weight" name="weight" required>
+
+            <label for="allergies">Do you have any allergies?</label>
+            <select id="allergies" name="allergies" required>
+                <option value="no">No</option>
+                <option value="yes">Yes</option>
+            </select>
+
+            <label for="allergyDetails" id="allergyLabel" style="display:none;">Please list your allergies:</label>
+            <input type="text" id="allergyDetails" name="allergyDetails" style="display:none;">
+
+            <label for="goals">Do you have any specific fitness goals?</label>
+            <select id="goals" name="goals" required>
+                <option value="no">No</option>
+                <option value="yes">Yes</option>
+            </select>
+
+            <label for="goalDetails" id="goalLabel" style="display:none;">Please describe your goals:</label>
+            <input type="text" id="goalDetails" name="goalDetails" style="display:none;">
+
+            <input type="submit" value="Submit">
+        </form>
+
+        <div class="result" id="result"></div>
+    </div>
+</body>
+</html>
